@@ -1,0 +1,13 @@
+
+{
+ "user": {
+
+   "id": "0001",
+   "user-name": "Bob",
+   "name" : "Lucian",
+   "image": {
+              "url":"img/Oslo.png"
+            }
+
+   }
+ }

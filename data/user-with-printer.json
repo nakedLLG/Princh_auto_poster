@@ -1,0 +1,30 @@
+
+{
+ "user": {
+
+   "id": "0001",
+   "user-name": "Bob",
+   "name" : "Rick Sanchez",
+   "image": {
+    "url":"img/Oslo.png"
+    },
+    "country": "Denmark",
+    "curency":"dkk",
+    "printer": {   
+
+      "format": {
+        "A4": [
+        {"color":"colored", "price":2},
+        {"color":"black/white", "price":1}
+        ],
+        "A3": [
+        {"color":"colored", "price":4},
+        {"color":"black/white", "price":3}
+        ]
+        },
+        "message": "We have the best printing solution",
+        "id":"123456"
+      } 
+    } 
+  }
+

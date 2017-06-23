@@ -1,0 +1,25 @@
+{
+   "id": "000001",
+   "name": "PrintBro",
+   "format":
+            {
+   
+     "formatType": [
+                    {
+        "A4":[
+        {"color":{
+            "colored":{
+                "price":"1 dkk"
+                      }
+                 }
+            }]
+                    },
+        {
+            "A3":{"color"}
+        }
+        ],
+
+        },
+        
+    
+}

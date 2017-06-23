@@ -1,0 +1,91 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Print poster</title>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/mystyle.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="./css/mystyle2.css" media="print">
+</head>
+<body>	
+  <div id="body-container">
+  <div class=" no-margin">
+    <!-- <div id="pdf2htmldiv"> -->
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2 id="hello"></h2>
+          </div>
+          <div class="modal-body">
+            <p>Close me and press CTRL + P to print the poster</p>
+            <p>Some other text...</p>
+          </div>
+          <div class="modal-footer">
+            <img src="img/White-logo.png" alt="" width="100" >
+          </div>
+        </div>
+      </div>
+      <img id="pic-head" src="img/head.jpg"  alt="" width="" >
+      <img id="pic-body-upper" src="img/body-upper.jpg"  alt="" width="" >
+      <img id="pic-above-table" src="img/mid-pic.jpg"  alt="" width="" >
+      <br>
+      <br>
+      <table id="basic-table">
+        
+        <tbody>
+          <tr>
+            <td >A4</td>
+            <td>Colored</td>
+            <td id="a4-col-price"></td>
+            <td rowspan="3" id="qrcode" ></td>
+          </tr>
+          <tr>
+            <td>A4</td>
+            <td>Black/White</td>
+            <td id="a4-bw-price"></td>
+            
+          </tr>
+          <tr>
+            <td>A3</td>
+            <td>Colored</td>
+            <td id="a3-col-price"></td>
+            
+          </tr>
+          <tr>
+            <td>A3</td>
+            <td>Black/White</td>
+            <td id="a3-bw-price"></td>
+            <td id="printer-id"></td>
+          </tr>
+        </tbody>
+      </table>
+      <hr>
+      <div id="message-div">
+
+        <h2 id="message"></h2>
+      </div>
+      <div id="bottom-section">
+
+        <img id="bottom-pic" src="img/bottom.jpg"  alt="" width="" >
+      </div>
+    </div>
+    
+    <!--<a href="javascript:pdfToHTML()" class="btn btn-success"> Save file as PDF </a>-->
+  </div> 
+   
+
+  <script src="./js/jspdf.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="./js/pdfFromHTML.js"></script>
+  <script src="./js/main3.js"></script>
+  <script type="text/javascript" src="./js/qrcode.js"></script>
+  <script type="text/javascript" src="./js/jquery.qrcode.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
