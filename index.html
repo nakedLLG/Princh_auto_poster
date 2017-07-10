@@ -1,91 +1,196 @@
-<!doctype html>
+    <!doctype html>
 
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Print poster</title>
-  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="./css/mystyle.css" media="screen">
-  <link rel="stylesheet" type="text/css" href="./css/mystyle2.css" media="print">
-</head>
-<body>	
-  <div id="body-container">
-  <div class=" no-margin">
-    <!-- <div id="pdf2htmldiv"> -->
+    <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <title>Princh Poster Print</title>
+      <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="./css/mystyle.css" media="screen">
+      <link rel="stylesheet" type="text/css" href="./css/mystyle2.css" media="print">
+      <link rel="stylesheet" type="text/css" href="./css/jquery.localizationTool.css" media="screen">
+    </head>
+    <body>	
+      <div id="body-container">
+        <div class=" no-margin">
+          <!-- <div id="pdf2htmldiv"> -->
 
-      <!-- The Modal -->
-      <div id="myModal" class="modal">
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
 
-        <!-- Modal content -->
-        <div class="modal-content">
-          <div class="modal-header">
-            <span class="close">&times;</span>
-            <h2 id="hello"></h2>
-          </div>
-          <div class="modal-body">
-            <p>Close me and press CTRL + P to print the poster</p>
-            <p>Some other text...</p>
-          </div>
-          <div class="modal-footer">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="modal-header">
+                <!--<span class="close">&times;</span>-->
+                <h2 id="hello">Welcome to PrinchPoster</h2>
+              </div>
+              <div class="modal-body">
+                <h3>Fill in the form and press submit</h3>
+                <p>Simply refresh the page to submit a new form</p>
+                <form id="myForm"> 
+                  <div id="selectLanguageDropdown" class="localizationTool"></div>
+                  <br>
+                  <label for="myselect">Select a currency</label>
+                  <select id="myselect">
+                    <option value="EUR">EUR</option>
+                    <option value="DKK">DKK</option>
+                    <option value="SEK">SEK</option>
+                    <option value="NOK">NOK</option>
+                  </select>
+                  <br>
+                  <!-- Image upload -->
+                  <p>
+                    <label for="logoimg">Add your Logo<span>(optional)</span></label>
+                    <input type='file' id="logoimg" />
+                    <div id="pop-op-preview">
+                    <img id="user-pic-modal" src="#" alt="your image" />
+                    </div>
+
+                  </p>
+                  <!-- Image upload end -->
+                  <p> 
+                   <label for="a4-col-price-input">A4 color price<span>(required)</span></label>  
+                   <input id="a4-col-price-input" type="text" placeholder='A4 color price' required>
+                 </p>
+                 <p>
+                  <label for="a4-bw-price-input">A4 black/white price<span>(required)</span></label> 
+                  <input id="a4-bw-price-input" type="text" placeholder='A4 b/w price' required>
+                </p>
+                <p>
+                  <label for="a3-col-price-input">A3 color price<span>(required)</span></label> 
+                  <input id="a3-col-price-input" type="text" placeholder='A3 col price' required>
+                </p>
+                <p>
+                  <label for="a3-bw-price-input">A3 black/white price<span>(required)</span></label>
+                  <input id="a3-bw-price-input" type="text" placeholder='A3 b/w price' required>
+                </p>
+                <p>
+                  <label>Printer ID <span>(required)</span></label>
+                  <input id="qrcode-id" type="text" placeholder='Printer 6 digit id' required>
+                </p>
+                <p>
+                  <label for="message-box">A short message <span>(optional)</span></label>
+                  <textarea cols="22" rows="2" id="message-box" placeholder='Your message' name="message" ></textarea>
+                </p>
+                <br>
+                <div id="success">
+                 <h3><strong>Success!</strong> <br>The poster is being generated</h3>
+               </div>
+               <button id="mybutton" class="btn btn-success" type="submit">Submit</button>
+             </form>
+
+           </div>
+           <div class="modal-footer">
             <img src="img/White-logo.png" alt="" width="100" >
           </div>
         </div>
       </div>
-      <img id="pic-head" src="img/head.jpg"  alt="" width="" >
-      <img id="pic-body-upper" src="img/body-upper.jpg"  alt="" width="" >
-      <img id="pic-above-table" src="img/mid-pic.jpg"  alt="" width="" >
-      <br>
-      <br>
+       <!-- Poster start -->
+       <!-- Poster print head -->
+      <div id="pic-head">
+        <h1 id="pic-head-h1">PRINT GUIDE</h1>
+        <h3 id="pic-head-h3">It is possible to print using the following devices</h3>
+      </div>
+      <!-- Poster print body -->
+      <!-- Poster print info table -->
+      <div id="pic-body-upper">
+        <img src="img/body-upper1.jpg" alt="">
+        <table id="first-table" >
+          <tr>
+            <th id="first-table-head-col1" >PRINT FROM LIBRARY-PC</th>
+            <th id="first-table-head-col2" >PRINT FROM LAPTOP</th>
+            <th id="first-table-head-col3" >PRINT FROM MOBILE AND TABLET</th>
+          </tr>
+          <tr>
+            <td id="first-table-row1-col1">1 Open the document you want to print on the library PC</td>
+            <td id="first-table-row1-col2">1 Open a browser and go to print.princh.com</td>
+            <td id="first-table-row1-col3">1 Install the Princh app for iOS or Android</td>
+          </tr>
+          <tr>
+            <td id="first-table-row2-col1">2 Click print and approve</td>
+            <td id="first-table-row2-col2">2 Choose document and the libraries print-ID</td>
+            <td id="first-table-row2-col3">2 Open document and share itwith the Princh-app</td>
+          </tr>
+          <tr>
+            <td id="first-table-row3-col1">3 Check your print settings in the window that appears</td>
+            <td id="first-table-row3-col2">3 Choose your print settings</td>
+            <td id="first-table-row3-col3">3 Choose library printer-ID and your print settings</td>
+          </tr>
+          <tr>
+            <td id="first-table-row4-col1">4 Pay from the library PC using credit card</td>
+            <td id="first-table-row4-col2">4 Pay from your laptop using credit card</td>
+            <td id="first-table-row4-col3">4 Pay from your mobile or tablet using credit card</td>
+          </tr>
+        </table>
+      </div>
+      
+      <!-- Poster print second table (Format, Color, Price and QrCode) -->
       <table id="basic-table">
-        
+
         <tbody>
           <tr>
-            <td >A4</td>
-            <td>Colored</td>
-            <td id="a4-col-price"></td>
+            <th id="basic-table-head1">FORMAT</th>
+            <th id="basic-table-head2">COLOR</th>
+            <th id="basic-table-head3">PRICES</th>
+            <th id="basic-table-head4">PRINTER-ID</th>
+          </tr>
+
+          <tr>
+            <td rowspan="2"><img id="A4-pic" src="img/A4pic.png"  alt="" width="70" ></td>
+            <td id="A4-col-name">Colored</td>
+            <td id="a4-col-price">#</td>
             <td rowspan="3" id="qrcode" ></td>
           </tr>
-          <tr>
-            <td>A4</td>
-            <td>Black/White</td>
-            <td id="a4-bw-price"></td>
-            
+
+          <tr id="a4-bw-row">
+            <td id="A4-col-name-bw">Black/White</td>
+            <td id="a4-bw-price">#</td> 
           </tr>
+
           <tr>
-            <td>A3</td>
-            <td>Colored</td>
-            <td id="a3-col-price"></td>
-            
+            <td rowspan="2"><img id="A3-pic" src="img/A3pic.png"  alt="" width="70" ></td>
+            <td id="A3-col-name">Colored</td>
+            <td id="a3-col-price">#</td>
+
           </tr>
-          <tr>
-            <td>A3</td>
-            <td>Black/White</td>
-            <td id="a3-bw-price"></td>
-            <td id="printer-id"></td>
+          <tr id="a3-bw-row">
+
+            <td id="A3-col-name-bw">Black/White</td>
+            <td id="a3-bw-price">#</td>
+            <td id="printer-id">123456</td>
           </tr>
         </tbody>
       </table>
+
       <hr>
+      <!-- Poster print footer -->
+      <!-- Poster print user message -->
       <div id="message-div">
 
         <h2 id="message"></h2>
       </div>
+      <!-- Poster print user logo and Princh logo-->
       <div id="bottom-section">
-
-        <img id="bottom-pic" src="img/bottom.jpg"  alt="" width="" >
+        <img id="bottom-pic" src="img/princh_logo_white.png" alt="" />
+        <!--<img id="bottom-pic" src="img/bottom.jpg"  alt="" width="" >-->
+        <img id="user-pic" src="#" alt="your image" />
       </div>
     </div>
-    
+
     <!--<a href="javascript:pdfToHTML()" class="btn btn-success"> Save file as PDF </a>-->
   </div> 
-   
-
-  <script src="./js/jspdf.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="./js/pdfFromHTML.js"></script>
-  <script src="./js/main3.js"></script>
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="./js/main.js"></script>
   <script type="text/javascript" src="./js/qrcode.js"></script>
+  <script type="text/javascript" src="./js/translation.js"></script>
+  <script type="text/javascript" src="./js/jquery.cookie.js"></script>
   <script type="text/javascript" src="./js/jquery.qrcode.js"></script>
+  <script type="text/javascript" src="./js/jquery.localizationTool.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+
+
+
+
 </body>
 </html>
